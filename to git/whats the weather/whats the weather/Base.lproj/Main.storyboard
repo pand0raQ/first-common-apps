@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="whats_the_weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waethergonewiild_1280" translatesAutoresizingMaskIntoConstraints="NO" id="5s9-MZ-DQD">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJO-fu-7bg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="87J-85-bMA"/>
+                                    <constraint firstAttribute="height" constant="64" id="J2e-aF-C39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-94-z4e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="RZg-qZ-KYA"/>
+                                    <constraint firstAttribute="height" constant="21" id="UIB-4c-FEb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="London, Paris" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-p2-S59">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VP-KB-7c2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="3Y7-J5-Xok"/>
+                                    <constraint firstAttribute="height" constant="30" id="te1-s1-VoQ"/>
+                                </constraints>
+                                <state key="normal" title=" Submit"/>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sd9-ZJ-bRV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHR-87-Y0w">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7YI-jy-r0H"/>
+                                    <constraint firstAttribute="width" constant="362" id="kPx-Sk-xVz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mJO-fu-7bg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Fb-bX-lfl"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AlO-c5-GC5"/>
+                            <constraint firstItem="w7H-94-z4e" firstAttribute="top" secondItem="mJO-fu-7bg" secondAttribute="bottom" constant="8" id="DVd-em-cYO"/>
+                            <constraint firstItem="yHR-87-Y0w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNa-yW-iIr"/>
+                            <constraint firstItem="mJO-fu-7bg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kia-CK-q6b"/>
+                            <constraint firstItem="mJO-fu-7bg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mkm-Lw-ZLs"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PgN-Ih-x7W"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="top" secondItem="w7H-94-z4e" secondAttribute="bottom" constant="8" id="VmN-2L-FNU"/>
+                            <constraint firstItem="w7H-94-z4e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WF2-Sq-YcX"/>
+                            <constraint firstItem="9VP-KB-7c2" firstAttribute="top" secondItem="ePy-p2-S59" secondAttribute="bottom" constant="8" id="WYJ-sd-oYN"/>
+                            <constraint firstItem="9VP-KB-7c2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gWX-BW-Ewd"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hwi-5c-jg4"/>
+                            <constraint firstItem="yHR-87-Y0w" firstAttribute="top" secondItem="9VP-KB-7c2" secondAttribute="bottom" constant="37" id="iPy-EA-82S"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iYS-Rf-qGc"/>
+                            <constraint firstAttribute="trailing" secondItem="yHR-87-Y0w" secondAttribute="trailing" constant="7" id="jsx-1J-5il"/>
+                            <constraint firstItem="ePy-p2-S59" firstAttribute="top" secondItem="w7H-94-z4e" secondAttribute="bottom" constant="8" id="mO0-ZF-z5X"/>
+                            <constraint firstItem="yHR-87-Y0w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="6" id="w6P-lz-gW7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="ePy-p2-S59" id="xAm-fu-s96"/>
+                        <outlet property="result" destination="yHR-87-Y0w" id="DQ6-5Y-YFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="waethergonewiild_1280" width="1280" height="720"/>
+    </resources>
+</document>
